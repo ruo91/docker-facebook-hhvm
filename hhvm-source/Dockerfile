@@ -27,8 +27,8 @@ RUN apt-get update && apt-get install -y git supervisor \
 # HHVM
 ENV SRC_DIR /opt
 RUN cd $SRC_DIR && git clone git://github.com/facebook/hhvm.git \
- && cd hhvm && git submodule update --init --recursive && make && make install \
- && mkdir /etc/hhvm
+ && cd hhvm && git submodule update --init --recursive && cmake . && make && make install \
+ && mkdir /etc/hhvm && rm -rf $SRC_DIR/hhvm
 
 # ADD in the "/etc/hhvm" directory
 ADD conf/php.ini	/etc/hhvm/php.ini
