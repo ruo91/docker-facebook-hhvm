@@ -36,9 +36,8 @@ ADD conf/server.ini	/etc/hhvm/server.ini
 
 # https://github.com/facebook/hhvm/issues/3112
 RUN echo 'export LANG=C' >> /etc/profile \
- && echo 'export LC_ALL=C' >> /etc/profile \
- && echo '' >> /etc/profile
-
+ && echo 'export LC_ALL=C' >> /etc/profile
+ 
 # Supervisor
 RUN mkdir -p /var/log/supervisor
 ADD conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
