@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y wget supervisor add-apt-key
 
 # HHVM
 RUN wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | apt-key add - \
- && echo deb http://dl.hhvm.com/ubuntu trusty main | sudo tee /etc/apt/sources.list.d/hhvm.list \
+ && echo "deb http://dl.hhvm.com/ubuntu trusty main" > /etc/apt/sources.list.d/hhvm.list \
  && apt-get update && apt-get install -y hhvm
 
 # ADD in the "/etc/hhvm" directory
