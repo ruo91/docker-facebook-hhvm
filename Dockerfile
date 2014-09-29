@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y wget supervisor add-apt-key
 # HHVM
 RUN wget -O - http://dl.hhvm.com/conf/hhvm.gpg.key | apt-key add - \
  && echo "deb http://dl.hhvm.com/ubuntu trusty main" > /etc/apt/sources.list.d/hhvm.list \
- && apt-get update && apt-get install -y hhvm
+ && apt-get update && apt-get install -y hhvm libgmp10
 
 # ADD in the "/etc/hhvm" directory
 ADD conf/php.ini	/etc/hhvm/php.ini
