@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y git supervisor \
  libjemalloc-dev libmcrypt-dev libmemcached-dev libmysqlclient-dev libncurses-dev \
  libonig-dev libpcre3-dev libreadline-dev libtbb-dev libtool libxml2-dev zlib1g-dev \
  libevent-dev libmagickwand-dev libinotifytools0-dev libiconv-hook-dev libedit-dev \
- libiberty-dev libxslt1-dev ocaml-native-compilers php5-imagick libyaml-dev
+ libiberty-dev libxslt1-dev ocaml-native-compilers php5-imagick libyaml-dev libgmp10
 
 # HHVM
 ENV SRC_DIR /opt
