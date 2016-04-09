@@ -1,11 +1,10 @@
-# Facebook HHVM FastCGI
+# Facebook - HHVM
+### - Build
+ ```sh
+ root@ruo91:~# docker build --rm -t hhvm:packages https://github.com/ruo91/docker-hhvm.git
+```
 
-**- Build**
-
-    root@ruo91:~# git clone https://github.com/ruo91/docker-facebook-hhvm.git /opt/docker-facebook-hhvm
-    root@ruo91:~# docker build --rm -t hhvm:packages /opt/docker-facebook-hhvm
-
-**- Container run**
-
-    root@ruo91:~# docker run -d --name="hhvm-packages" \
-    -p 9000:9000 -v /tmp:/tmp -v /home:/home hhvm:packages
+# - Container run
+```sh
+root@ruo91:~# docker run -d --name="hhvm" -h "hhvm" -p 9000:9000 -v /tmp:/tmp -v /home:/home hhvm:packages
+```
