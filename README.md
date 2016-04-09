@@ -1,7 +1,7 @@
 # Facebook - HHVM
 ### - Build
  ```sh
- root@ruo91:~# docker build --rm -t hhvm:packages https://github.com/ruo91/docker-hhvm.git
+ root@ruo91:~# docker build --rm -t hhvm:packages https://github.com/ruo91/docker-facebook-hhvm.git
 ```
 
 # - Container run
